@@ -1,5 +1,7 @@
 # linux-commands
 
+![](https://journaldev.nyc3.digitaloceanspaces.com/2020/01/Top_50_Linux_Commands-1.png)
+
 1. ls - The most frequently used command in Linux to list directories
 2. pwd - Print working directory command in Linux
 3. cd - Linux command to navigate through directories
