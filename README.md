@@ -53,4 +53,4 @@
 50. useradd and usermod - Add new user or change existing users data
 51. passwd - Create or update passwords for existing users
 
-(source: www.digitalocean.com) [https://www.digitalocean.com/community/tutorials/linux-commands]
+[source: www.digitalocean.com] (https://www.digitalocean.com/community/tutorials/linux-commands)
