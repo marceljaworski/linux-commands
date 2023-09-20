@@ -52,5 +52,18 @@
 49. top - View active processes live with their system usage
 50. useradd and usermod - Add new user or change existing users data
 51. passwd - Create or update passwords for existing users
+52. ssh student@ubuntu 
+53. shutdown -h - shutdown the system
+54. shtudown -r - reboot the system
+54. `which diff` or `whereis diff` - locate a file in the local system
+55. `tree` - Displays a tree view of the filesystem
+
+## Absolute pathname method 
+
+`cd /usr/bin`
+
+## Relative pathname method
+
+`cd ../../usr/bin`
 
 [source: www.digitalocean.com] (https://www.digitalocean.com/community/tutorials/linux-commands)
