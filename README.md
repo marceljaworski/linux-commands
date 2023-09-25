@@ -5,15 +5,15 @@
 1. ls - The most frequently used command in Linux to list directories
 2. pwd - Print working directory command in Linux
 3. cd - Linux command to navigate through directories
-4. mkdir - Command used to create directories in Linux
+4. mkdir - Command used to create directories in Linux `mkdir /usr/newdir`
 5. mv - Move or rename files in Linux
 6. cp - Similar usage as mv but for copying files in Linux
-7. rm - Delete files or directories
-8. touch - Create blank/empty files
+7. rm - Delete files or directories `rm -rf`-> rm not empy files `rmdir` -> rm empty dir
+8. touch -> Modifies and creates files
 9. ln - Create symbolic links (shortcuts) to other files
 10. cat - Display file contents on the terminal
 11. clear - Clear the terminal display
-12. echo - Print any text that follows the command
+12. echo - Print any text that follows the command `echo > newFile` create a file
 13. less - Linux command to display paged outputs in the terminal
 14. man - Access manual pages for all Linux commands
 15. uname - Linux command to get basic information about the OS
@@ -56,14 +56,62 @@
 53. shutdown -h - shutdown the system
 54. shtudown -r - reboot the system
 54. `which diff` or `whereis diff` - locate a file in the local system
-55. `tree` - Displays a tree view of the filesystem
+55. `tree` `tree -d /` - Displays a tree view of the filesystem 
+56. `wc file.txt` - word count from a file
+57. `locate zip | grep bin` -> locate perform a databse search
+58. `find . -name "fileName*" -ls` `-iname` -> ignore the name  `-type d -name` -> looking for directory `sudo find /usr -type f -name filename` -> looking for files with name.. `sudo find . -type d`
+59. `sudo updatedb` to see new files or not see deleted files `cd /etc/`|`cat updatedb.conf`
+60. `find -name "*.swp" -exec rm {} ";"` Finds and removes files that ends with .swp *.swp `sudo find . -size 0`-> looking files depend of his size
+Find locates files recursively
 
 ## Absolute pathname method 
 
+Absolute pathname begins with the root
 `cd /usr/bin`
 
 ## Relative pathname method
 
+Relative starts from present working directory
 `cd ../../usr/bin`
 
-[source: www.digitalocean.com] (https://www.digitalocean.com/community/tutorials/linux-commands)
+## Package Manage System
+
+`dpkg --list`
+`dpkg --list | less`
+`dpkg --list | grep bzip2` -> looking for a package name
+`dpkg --listfiles bzip2 | less`
+`sudo dpkg --remove bzip2`
+
+`sudo apt-cache search wget2`
+`sudo apt-get install wget2-dev`
+`sudo apt-get remove wget`
+`sudo apt-get remove wget2`
+
+## Finding Linux Documentation
+
+### man pages
+
+`man socket` -> manual 
+`man -f sysctl` -> discuss a topic ==  `whatis sysctl`
+`man 7 sysctl` -> giving the main page in chapter 7 `man -a sysctl`-> all
+`man -k sysctl` -> see all the main pages == `apropos systcl`
+
+### GNU Info System has documentation
+
+`info make` -> get info about the make utiliti headnode
+and then `/` then `Example` then `return`-> get that page `n` -> next `p`->previous `u`-> go up `h`-> Help `q`-> exit
+
+### help command
+
+Display descriptions
+`man --help` **help**  to know more about a command
+
+## Process
+
+`ps`
+`ps lf` -> show the priority
+`renice +5 3077` 3077 = PID proces id number -> change the priority
+`sudo renice -5 3077` -> decrease the priority
+`gnome-system-monitor` => modify priorities from the graphic interface
+
+
